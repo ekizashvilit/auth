@@ -54,12 +54,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  overflow-x: hidden !important;
 }
 
 .socials-icons {
   width: 100%;
-  min-width: 100px;
-  max-width: 220px;
   cursor: pointer;
 }
 
@@ -83,4 +82,63 @@ body {
 
 .line-container::after {
   margin-left: 20px;
+}
+
+.anticon {
+  color: black !important;
+}
+
+.ant-form-item-required {
+  color: black !important;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 500;
+}
+
+.ant-input {
+  height: 60px;
+}
+
+.ant-row,
+.ant-form-item-row {
+  display: flex;
+}
+
+.ant-col {
+  margin-inline-start: 0;
+  max-width: 100%;
+}
+
+.ant-btn {
+  height: 60px;
+  background: #ed1c24;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ant-btn:hover {
+  background-color: #ed1a25 !important;
+}
+
+.custom-font {
+  font-family: "Noto Sans Georgian", sans-serif !important;
+}
+
+.anticon-eye-invisible {
+  font-size: 20px !important;
+}
+
+.ant-input {
+  border: none;
+  font-size: 1rem;
+}
+
+.media {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .media {
+    display: none;
+  }
 }
