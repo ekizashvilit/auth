@@ -1,18 +1,20 @@
 import { ReactComponent as Account } from "./assets/svg/account.svg";
 import { ReactComponent as Bars } from "./assets/svg/bars.svg";
-import Hero from "./components/Hero";
+import ProfileDrawer from "./components/profile/ProfileDrawer";
+import AuthDrawer from "./components/registration/AuthDrawer";
 import { useGlobalContext } from "./context";
 
 function App() {
-  const { showDrawer } = useGlobalContext();
+  const { showRegistration, showProfile } = useGlobalContext();
 
   return (
     <main className="h-screen">
       <section className="flex gap-4 items-center justify-end h-1/6 px-4">
-        <Account onClick={showDrawer} />
-        <Bars />
+        <Account onClick={showRegistration} />
+        <Bars onClick={showProfile} />
       </section>
-      <Hero />
+      <AuthDrawer />
+      <ProfileDrawer />
     </main>
   );
 }

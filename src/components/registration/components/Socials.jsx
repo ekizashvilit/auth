@@ -1,5 +1,5 @@
-import { ReactComponent as Facebook } from "../assets/svg/facebook.svg";
-import { ReactComponent as Linkedin } from "../assets/svg/linkedin.svg";
+import { ReactComponent as Facebook } from "../../../assets/svg/facebook.svg";
+import { ReactComponent as Linkedin } from "../../../assets/svg/linkedin.svg";
 
 const Socials = () => {
   return (

@@ -3,19 +3,36 @@ import React, { useContext, useState } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState("bottom");
+  const [openRegistration, setOpenRegistration] = useState(false);
+  const [openProfile, setOpenProfile] = useState(false);
 
-  const showDrawer = () => {
-    setOpen(true);
+  const showRegistration = () => {
+    setOpenRegistration(true);
   };
 
-  const onClose = () => {
-    setOpen(false);
+  const closeRegistration = () => {
+    setOpenRegistration(false);
+  };
+
+  const showProfile = () => {
+    setOpenProfile(true);
+  };
+
+  const closeProfile = () => {
+    setOpenProfile(false);
   };
 
   return (
-    <AppContext.Provider value={{ placement, showDrawer, onClose, open }}>
+    <AppContext.Provider
+      value={{
+        showRegistration,
+        closeRegistration,
+        showProfile,
+        closeProfile,
+        openProfile,
+        openRegistration,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

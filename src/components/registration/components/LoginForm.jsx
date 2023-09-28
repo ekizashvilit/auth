@@ -1,5 +1,5 @@
 import { Button, Form, Input } from "antd";
-import TextInput from "./inputs/textInpt/TextInput";
+import TextInput from "../../inputs/textInpt/TextInput";
 
 const onFinish = (values) => {
   console.log("Success:", values);

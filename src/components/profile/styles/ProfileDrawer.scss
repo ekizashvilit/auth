@@ -1,0 +1,28 @@
+.profile-drawer {
+  .ant-drawer-content-wrapper {
+    border-top-right-radius: 1rem !important;
+    border-top-left-radius: 1rem !important;
+    // box-shadow: none !important;
+  }
+
+  border-top-right-radius: 1rem !important;
+  border-top-left-radius: 1rem !important;
+
+  .ant-drawer-mask {
+    background: transparent !important;
+  }
+
+  .ant-drawer-header-title {
+    justify-content: end;
+    // height: 36px;
+    // width: 36px;
+  }
+
+  .ant-drawer-close {
+    background: #f1f2f6;
+    margin-inline-end: 0;
+    border-radius: 50%;
+    padding: 5px;
+    color: #645e55;
+  }
+}
