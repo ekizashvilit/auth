@@ -14,12 +14,16 @@ body {
   font-family: "Noto Sans Georgian", sans-serif;
 }
 
-@media (min-width: 1024px) {
-  .media {
-    display: none;
-  }
+.custom-font {
+  font-family: "Noto Sans Georgian", sans-serif !important;
 }
 
 .ant-drawer-header {
   border-bottom: none !important;
+}
+
+@media (min-width: 1024px) {
+  .media {
+    display: none;
+  }
 }

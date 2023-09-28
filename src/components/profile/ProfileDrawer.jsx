@@ -1,6 +1,7 @@
 import { Drawer } from "antd";
 import { useGlobalContext } from "../../context";
 import "./styles/ProfileDrawer.scss";
+import { profileItems } from "../../utils";
 
 const ProfileDrawer = () => {
   const { closeProfile, openProfile } = useGlobalContext();
@@ -8,15 +9,30 @@ const ProfileDrawer = () => {
     <Drawer
       placement={"bottom"}
       width={500}
-      height={240}
+      height={"auto"}
       onClose={closeProfile}
       open={openProfile}
       maskStyle={{
         opacity: 0,
       }}
+      contentWrapperStyle={{
+        borderRadius: "16px",
+      }}
       className="profile-drawer media"
     >
-      <div>hi</div>
+      <ul className="flex flex-col gap-9">
+        {profileItems.map((item) => {
+          return (
+            <li
+              key={item.id}
+              className="list-none flex gap-3 text-lg font-bold items-center custom-font"
+            >
+              {item.icon}
+              {item.text.toLocaleUpperCase()}
+            </li>
+          );
+        })}
+      </ul>
     </Drawer>
   );
 };

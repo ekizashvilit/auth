@@ -1,10 +1,4 @@
 .profile-drawer {
-  .ant-drawer-content-wrapper {
-    border-top-right-radius: 1rem !important;
-    border-top-left-radius: 1rem !important;
-    // box-shadow: none !important;
-  }
-
   border-top-right-radius: 1rem !important;
   border-top-left-radius: 1rem !important;
 
@@ -12,17 +6,27 @@
     background: transparent !important;
   }
 
+  .ant-drawer-header {
+    position: relative;
+  }
+
   .ant-drawer-header-title {
     justify-content: end;
-    // height: 36px;
-    // width: 36px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
   }
 
   .ant-drawer-close {
     background: #f1f2f6;
     margin-inline-end: 0;
     border-radius: 50%;
-    padding: 5px;
+    padding: 7px;
     color: #645e55;
+  }
+
+  .ant-drawer-body {
+    padding: 54px;
+    padding-top: 33px;
   }
 }
