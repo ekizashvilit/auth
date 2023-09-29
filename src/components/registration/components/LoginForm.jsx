@@ -1,15 +1,8 @@
 import { Button, Form, Input } from "antd";
 import TextInput from "../../inputs/textInpt/TextInput";
+import { useGlobalContext } from "../../../context";
 
-const onFinish = (values) => {
-  console.log("Success:", values);
-};
-
-const onFinishFailed = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
-
-const LoginForm = () => {
+const LoginForm = ({ onFinish, onFinishFailed }) => {
   return (
     <Form
       onFinish={onFinish}

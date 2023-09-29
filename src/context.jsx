@@ -1,10 +1,29 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, createContext, useMemo } from "react";
 
-const AppContext = React.createContext();
+const AppContext = createContext({
+  user: {},
+  accessToken: null,
+  setUser: () => {},
+  resetUser: () => {},
+});
 
 const AppProvider = ({ children }) => {
   const [openRegistration, setOpenRegistration] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
+  const [userData, setUserData] = useState({});
+  // const [accessToken, setAccessToken] = useState(
+  //   localStorage.getItem("accessToken")
+  // );
+
+  const setUser = (user) => {
+    if (user && typeof user === "object") {
+      setUserData(user);
+    }
+  };
+
+  // const resetUser = () => {
+  //   setUserData({});
+  // };
 
   const showRegistration = () => {
     setOpenRegistration(true);
@@ -31,6 +50,8 @@ const AppProvider = ({ children }) => {
         closeProfile,
         openProfile,
         openRegistration,
+        userData,
+        setUser,
       }}
     >
       {children}

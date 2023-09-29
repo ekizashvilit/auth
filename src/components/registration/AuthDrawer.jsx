@@ -5,8 +5,21 @@ import Socials from "./components/Socials";
 import "./styles/AuthDrawer.scss";
 import LoginForm from "./components/LoginForm";
 const AuthDrawer = () => {
-  const { closeRegistration, openRegistration } = useGlobalContext();
+  const { closeRegistration, openRegistration, userData, setUser } =
+    useGlobalContext();
 
+  const onFinish = (values) => {
+    closeRegistration();
+
+    setUser({
+      username: values.username,
+      password: values.password,
+    });
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
   return (
     <Drawer
       title={<GrLogo />}
@@ -30,7 +43,7 @@ const AuthDrawer = () => {
         </h4>
       </div>
       <Socials />
-      <LoginForm />
+      <LoginForm onFinish={onFinish} onFinishFailed={onFinishFailed} />
     </Drawer>
   );
 };

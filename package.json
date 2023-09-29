@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "http://192.168.103.161:5000/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,8 +12,10 @@
   },
   "dependencies": {
     "antd": "^5.9.3",
+    "axios": "^1.5.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

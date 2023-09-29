@@ -27,3 +27,11 @@ body {
     display: none;
   }
 }
+
+.ant-card-body {
+  display: flex !important;
+  justify-content: space-between !important;
+  padding: 24px 44px !important;
+  width: 100%;
+  max-width: 1532px !important;
+}
