@@ -28,10 +28,10 @@ body {
   }
 }
 
-.ant-card-body {
-  display: flex !important;
-  justify-content: space-between !important;
-  padding: 24px 44px !important;
-  width: 100%;
-  max-width: 1532px !important;
+.delete-btn svg {
+  margin-bottom: -1px;
+}
+
+.edit-btn svg {
+  margin-top: 2px;
 }
